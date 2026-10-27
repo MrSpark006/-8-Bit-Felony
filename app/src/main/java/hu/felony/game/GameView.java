@@ -111,7 +111,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback, Run
             if (h.getSurface().isValid()) {
                 Canvas c = h.lockCanvas();
                 if (c != null) {
-                    try { draw(c); } finally { h.unlockCanvasAndPost(c); }
+                    try { render(c); } finally { h.unlockCanvasAndPost(c); }
                 }
             }
             try { Thread.sleep(8); } catch (Exception e) { }
@@ -214,7 +214,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback, Run
         c.drawText(s, x, y, p);
     }
 
-    void draw(Canvas c) {
+    void render(Canvas c) {
         c.drawColor(0xFF1B1B22);
         if (state == 0) { menu(c); return; }
         if (state == 2) {
