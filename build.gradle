@@ -1,16 +1,3 @@
-plugins { id 'com.android.application' }
-android {
-    namespace 'hu.felony.game'
-    compileSdk 34
-    defaultConfig {
-        applicationId 'hu.felony.game'
-        minSdk 21
-        targetSdk 34
-        versionCode 1
-        versionName '0.1'
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
+plugins {
+    id 'com.android.application' version '8.5.2' apply false
 }
